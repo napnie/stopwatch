@@ -12,4 +12,12 @@ these results:
 |Sum array of BigDecimal                                 | 9.867771 sec|
 
 ## Explanation of Results
-
+  
+ Append StringBuilder is faster than append String because append StringBuilder  
+ does not require to create entirely new String object like String.  
+   
+ Double primitive is faster than 'Double' and 'BigDecimal' because double primitive is  
+ primitives variable which is faster than object like 'Double' and 'BigDecimal'  
+ and since 'BigDecimal' require more memory than double primitive and 'Double'  
+ ,it is the slowest. 
+  
