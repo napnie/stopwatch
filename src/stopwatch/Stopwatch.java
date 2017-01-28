@@ -4,8 +4,8 @@ package stopwatch;
  * Stopwatch that measure elapsed time between start time and stop time
  * or until the present time.
  * @author Nitith Chayakul
- * @version 1.0
  * @since Jan 28, 2017
+ * 
  */
 public class Stopwatch {
 	/** time that stopwatch is start, in nanoseconds. */
