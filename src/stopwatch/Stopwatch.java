@@ -20,16 +20,16 @@ public class Stopwatch {
 	private final double NANOSECOND = 1.0E-9;
 
 	/** Start the stopwatch if it is not running. */
-	void start(){
-		if (!isRunning){
+	public void start() {
+		if (!isRunning) {
 			start = System.nanoTime();
 			isRunning = true;
 		}
 	}
 	
 	/** Stop the stopwatch if it is running. */
-	void stop(){
-		if (isRunning){
+	public void stop() {
+		if (isRunning) {
 			stop = System.nanoTime();
 			isRunning = false;
 			duration = (stop-start)*NANOSECOND;
@@ -37,15 +37,15 @@ public class Stopwatch {
 	}
 
 	/** @return true if Stopwatch is running */
-	boolean isRunning(){
+	public boolean isRunning() {
 		return isRunning;
 	}
 
 	/** @return elapsed time between start time and stop time or present time if it is running, in senconds with decimal. */
-	double getElapsed(){
-		if (isRunning){
+	public double getElapsed(){
+		if (isRunning) {
 			return (System.nanoTime()-start)*NANOSECOND;
-		}else{
+		} else {
 			return duration;
 		}
 	}
