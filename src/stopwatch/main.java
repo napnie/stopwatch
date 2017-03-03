@@ -20,12 +20,12 @@ public class main {
 		SumDouble task5 = new SumDouble(counter);
 		SumBigDecimal task6 = new SumBigDecimal(counter);
 		
-		taskRunner.tasking(task1);
-		taskRunner.tasking(task2);
-		taskRunner.tasking(task3);
-		taskRunner.tasking(task4);
-		taskRunner.tasking(task5);
-		taskRunner.tasking(task6);
+		taskRunner.measureAndPrint(task1);
+		taskRunner.measureAndPrint(task2);
+		taskRunner.measureAndPrint(task3);
+		taskRunner.measureAndPrint(task4);
+		taskRunner.measureAndPrint(task5);
+		taskRunner.measureAndPrint(task6);
 	}
 
 }

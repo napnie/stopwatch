@@ -20,7 +20,7 @@ public class TaskTimer {
 	 * Run the task and measure the elapse time.
 	 * @param task is a task object that you want to measure elapse time
 	 */
-	public void tasking(Runnable task){
+	public void measureAndPrint(Runnable task){
 		watch.start();
 		task.run();
 		watch.stop();
