@@ -25,6 +25,6 @@ public class TaskTimer {
 		task.run();
 		watch.stop();
 		System.out.println(task.toString());
-		System.out.printf("Elapsed time %.6f sec\n\n", watch.getElapsed());
+		System.out.printf("Elapsed time: %.6f sec\n\n", watch.getElapsed());
 	}
 }
