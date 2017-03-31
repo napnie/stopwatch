@@ -16,11 +16,16 @@ public class Stopwatch {
 	private double duration;
 	/** Constant for converting nanoseconds to seconds. */
 	private final double NANOSECOND = 1.0E-9;
-	
+	/** attribute for stopwatch state */
 	private StopwatchState state;
+	/** constant for RUNNING state */
 	private final StopwatchState RUNNING = new RunningState();
+	/** constant for STOPPED state */
 	private final StopwatchState STOPPED = new StoppedState();
-
+	
+	/**
+	 * Initialize Stopwatch with STOPPED state.
+	 */
 	public Stopwatch() {
 		setState( STOPPED );
 	}
@@ -52,10 +57,19 @@ public class Stopwatch {
 		return state.getElapsed();
 	}
 	
+	/**
+	 * Set the state of this object.
+	 * @param state - state of object that want to set
+	 */
 	private void setState( StopwatchState state ) {
 		this.state = state;
 	}
 	
+	/**
+	 * Interface for state of Stopwatch.
+	 * @author Nitith Chayakul
+	 *
+	 */
 	interface StopwatchState {
 
 		/** Start the stopwatch if it is not running. */
@@ -68,6 +82,11 @@ public class Stopwatch {
 		public double getElapsed() ;
 	}
 	
+	/**
+	 * RUNNING state for stopwatch.
+	 * @author Nitith Chayakul
+	 *
+	 */
 	public class RunningState implements StopwatchState {
 		
 		/**
@@ -94,6 +113,11 @@ public class Stopwatch {
 		}
 	}
 	
+	/**
+	 * STOPPED state for stopwatch.
+	 * @author Nitith Chayakul
+	 *
+	 */
 	public class StoppedState implements StopwatchState {
 		
 		/** @see StopwatchState#start() */
